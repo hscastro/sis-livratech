@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<header th:fragment="cabecalho">
+		<nav class="navbar navbar-inverse navbar navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="btn btn-dark navbar-toggle pull-left">
+						<i class="oi oi-menu"></i>
+					</button>
+					<a class="navbar-brand " href="#">Sistema da Livrariatech - Aprender </a>
+				</div>
+		            <form action="/logout" method="post" class="navbar-form navbar-right">
+		            	<!-- <span th:if="${session.usuarioLogado.nome != null}" th:text="${session.usuarioLogado.nome}"></span>-->
+		        		<button type="submit" class="btn btn-default">		        			
+		        			<span class="glyphicon glyphicon-log-out"></span>
+		        			Sair
+		        		</button>
+		        		
+			      	</form>				
+			</div>
+		</nav>
+	</header>	
+</body>
+</html>

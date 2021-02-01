@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+	<head>
+	    <title>Login no Sistema</title>
+	    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+	    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+	    <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+	    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+	    <meta charset="UTF-8" />
+	</head>
+
+	<body style="background-color: #f9f9f9;">
+		<div class="row" style="margin-left: 30%; margin-right: 25%; width: 100%;">
+			<div class="col-sm-4 col-sm-offset-4">
+				<div th:if="${param.error}">
+					<div class="alert alert-danger">Usuário e/ou inválidos!</div>
+				</div>
+
+				<div th:if="${param.logout}">
+					<div class="alert alert-info">Até logo!</div>
+				</div>
+
+				<div class="panel panel-info" >
+					<div class="panel-heading">
+				    	<h4 class="panel-title" >Acesso</h4>
+				  	</div>
+					<div class="panel-body">
+						<div th:text="${mensagem}" th:if="${mensagem != null}" class="alert alert-danger"></div>
+						<form action="/login" th:object="${usuario}"
+							method="POST">
+							<div class="form-group">
+								<input type="text" name="login" class="form-control" placeholder="Usuário" />
+							</div>
+
+							<div class="form-group">
+								<input type="password" name="senha" class="form-control" placeholder="Senha"/>
+							</div>
+
+							<div class="form-group">
+								<button class="btn btn-primary btn-block">Entrar</button>
+							</div>
+
+							<div class="form-group">
+								<label for="cadastre-se"><a href="/cliente/cadastro">Cadastre-se</a></label>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+		<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+	</body>
+</html>

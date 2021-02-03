@@ -8,7 +8,7 @@ Projeto de teste para uma empresa de desenvolvimento com java web usando alguns 
 A o sistema desenvolvido em java e banco em memória H2, mas pode ser usado qualquer outro banco como mySQL, postgres, etc e no banc-end foi usado o
 framework thymeleaf.
 
-# Funcionalidades do AMIN<h3>(CRUD) </h3>
+# Funcionalidades do ADMIN<h3>(CRUD) </h3>
    <br/>
 1 - Create (criar); <br/>
 2 - Read (Ler);<br/>
@@ -17,7 +17,7 @@ framework thymeleaf.
 
 # Funcionalidades de usuários <h3>(CREATED) </h3>
    <br/>
-1 - Create (criar); <br/>
+1 - Create (criar categorias e livros); <br/>
 2 - Read (Ler);<br/>
 
 # projeto-livraria

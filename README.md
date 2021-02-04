@@ -15,7 +15,7 @@ framework thymeleaf.
 3 - Update (editar);<br/>
 4 - Delete (excluir); <br/>
 
-# Funcionalidades de usuários <h3>(CREATED) </h3>
+# Funcionalidades de usuários <h3>(CREATED and READ) </h3>
    <br/>
 1 - Create (criar categorias e livros); <br/>
 2 - Read (Ler);<br/>

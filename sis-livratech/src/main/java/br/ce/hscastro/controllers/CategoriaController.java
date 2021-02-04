@@ -30,7 +30,7 @@ public class CategoriaController {
 	
 	@GetMapping("/cadastrar")
 	public String cadastrar(Categoria categoria) {
-		return "/categoria/cadastro";
+		return "categoria/cadastro";
 	}
 
 	@PostMapping("/salvar")
@@ -43,14 +43,14 @@ public class CategoriaController {
 	@GetMapping("/listar")
 	public String listar(ModelMap model) {
 		model.addAttribute("categorias",  service.buscarTodos());
-		return "/categoria/lista";		
+		return "categoria/lista";		
 	}
 
 	
 	@GetMapping("/editar/{id}")
 	public String preEditar(@PathVariable("id") Long id, ModelMap model) {
 		model.addAttribute("categoria", service.buscarPorId(id));
-		return "/categoria/cadastro";
+		return "categoria/cadastro";
 	}	
 	
 	@PostMapping("/editar")

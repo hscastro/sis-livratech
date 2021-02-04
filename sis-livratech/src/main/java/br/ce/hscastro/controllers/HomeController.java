@@ -61,7 +61,7 @@ public class HomeController {
 
 	@GetMapping("/cliente/cadastro")
 	public String cadastrar(Cliente cliente) {
-		return "/cliente/cadastro";
+		return "cliente/cadastro";
 	}
 	
 	@ModelAttribute("ufs")

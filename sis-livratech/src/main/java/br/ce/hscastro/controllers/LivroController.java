@@ -31,7 +31,7 @@ public class LivroController {
 	
 	@GetMapping("/cadastrar")
 	public String cadastrar(Livro livro) {
-		return "/livro/cadastro";
+		return "livro/cadastro";
 	}
 	
 	@PostMapping("/salvar")
@@ -44,7 +44,7 @@ public class LivroController {
 	@GetMapping("/editar/{id}")
 	public String preEditar(@PathVariable("id") Long id, ModelMap model) {
 		model.addAttribute("livro", livroService.buscarPorId(id));
-		return "/livro/cadastro";
+		return "livro/cadastro";
 	}	
 	
 	@PostMapping("/editar")
@@ -54,22 +54,11 @@ public class LivroController {
 		return "redirect:/livros/cadastrar"; 		
 	}
 
-//	@GetMapping("/excluir/{id}")
-//	public String excluir(@PathVariable("id") Long id, RedirectAttributes attr) {
-//		if(livroService.cargoTemFuncionario(id)) {			
-//			attr.addAttribute("fail", "Livro não removido. Possui funcionário(s) vinculado(s).");
-//		}else {
-//			livroService.excluir(id);
-//			attr.addAttribute("success", "Cargo excluído com sucesso.");			
-//		}		
-//		return "redirect:/cargos/listar";
-//	}	
-
 	
 	@GetMapping("/listar")
 	public String listar(ModelMap model) {
 		model.addAttribute("livros", livroService.buscarTodos());
-		return "/livro/lista";
+		return "livro/lista";
 	}	
 	
 	@ModelAttribute("categorias")
